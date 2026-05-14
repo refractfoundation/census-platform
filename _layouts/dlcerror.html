@@ -1,0 +1,30 @@
+---
+---
+
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    <div
+      class="hero"
+      style="
+        background-image: linear-gradient(
+            rgba(26, 24, 24, 0.273),
+            rgba(26, 24, 24, 0.273)
+          ),
+          url({{ page.hero_back }});
+        background-position-x: center;
+        /* background-position-y: -30vh; */
+        height: 100vh;
+      "
+    >
+      <img
+        src="{{ page.hero_logo }}"
+        alt="The Digital Literacy Census"
+        class="hero-logo"
+        style="width: 60%; filter: drop-shadow(0 8px 10px rgba(0,0,0,0.45));"
+      />
+      <h3>{{ page.hero_sub }}</h3>
+    </div>
+  </body>
+</html>

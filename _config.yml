@@ -1,0 +1,5 @@
+title: Digital Literacy Census
+description: "A Refract Foundation initiative."
+encoding: utf-8
+
+exclude: ["README.md", "LICENSE", "*.gem", "*.gemspec", "Gemfile.lock"]
