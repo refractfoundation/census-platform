@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Zilla+Slab+Highlight:wght@400;700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@400;700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 html,
 body {
@@ -203,20 +203,41 @@ h2 {
   margin: 15px auto;
 }
 
-.events {
+.event-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  min-height: 30vh;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  background-color: #004225;
+  background-image:
+    linear-gradient(
+      var(--event-card-overlay, rgba(0, 0, 0, 0.5)),
+      var(--event-card-overlay, rgba(0, 0, 0, 0.5))
+    ),
+    var(--event-card-image, none);
+  background-size: cover;
+  background-position: center var(--event-card-position-y, center);
 }
 
-.event-card {
-  background-color: aquamarine;
-  border-radius: 20px;
-  padding: 15px;
-  margin-bottom: 20px;
-  width: 100%;
-  height: 30vh;
-  color: white;
-  align-content: center;
+.event-card__logo {
+  width: var(--event-card-logo-width, 50%);
+  margin-bottom: var(--event-card-logo-margin-bottom, auto);
+}
+
+.event-card__copy {
+  margin: 0;
+}
+
+.event-card__cta {
+  align-self: center;
 }
 
 .btn {
@@ -225,55 +246,8 @@ h2 {
   padding: 15px;
   color: #004225;
   text-decoration: none;
-  font-size: 30px;
-}
-
-.event-projects {
-  display: flex;
-  flex-flow: row;
-  width: 100%;
-}
-
-.event-project {
-  width: 30%;
-  background-color: #004225;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  margin: 10px;
-  display: block;
-  color: white;
-  text-decoration: none;
-  align-content: center;
-}
-
-.event-project img {
-  width: 90%;
-  border-radius: 10px;
-}
-
-.event-gallery {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.event-gallery img {
-  width: 20vw;
-  margin: 10px;
-  border-radius: 10px;
-  aspect-ratio: initial;
-}
-
-.sponsor-card {
-  text-align: center;
-  /* padding: 15px; */
-  /* margin: 5px; */
-  width: 12vw;
-  align-content: center;
-}
-
-.sponsor-card img {
-  max-width: 80%;
+  font-size: clamp(1rem, 0.85rem + 1vw, 1.5rem);
+  line-height: 1.2;
 }
 
 @media (max-width: 768px) {
@@ -364,22 +338,12 @@ h2 {
     width: 90%;
   }
 
-  .event-gallery img {
-    width: calc(50% - 8px);
-    min-width: 120px;
-    margin: 4px;
+  .event-card {
+    min-height: 24vh;
   }
 
-  .event-projects {
-    flex-wrap: wrap;
-  }
-
-  .event-project {
-    width: calc(50% - 20px);
-  }
-
-  .sponsor-card {
-    width: clamp(55px, 18vw, 100px);
+  .event-card__logo {
+    width: var(--event-card-logo-width-mobile, var(--event-card-logo-width, 60%));
   }
 }
 

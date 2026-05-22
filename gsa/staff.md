@@ -20,29 +20,14 @@ This survey is designed to support a better understanding of staff's digital ski
 
 <div
   class="event-card"
-  style="
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(/img/campfire/1.JPG);
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  "
+  style="--event-card-image: url(/img/campfire/1.JPG); --event-card-position-y: 75vh; --event-card-logo-width: 35%; --event-card-logo-margin-bottom: 0.1vh;"
 >
   <img
+    class="event-card__logo"
     src="/img/logo/dlc_white.svg"
     alt="Digital Literacy Census"
-    style="width: 35%; margin-bottom: 0.1vh"
   />
-  <a
-    class="btn"
-    href="https://forms.gle/Nc8qvEKYWYS6qMXDA"
-    target="_blank"
-    >Click Here ></a
-  >
+  <a class="btn event-card__cta" href="https://forms.gle/Nc8qvEKYWYS6qMXDA" target="_blank" rel="noopener noreferrer">Click Here ></a>
 </div>
 
 ---
